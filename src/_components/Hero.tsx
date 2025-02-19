@@ -1,9 +1,10 @@
 import React, { useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import gsap from "gsap";
-import { FaReact, FaNodeJs, FaGithub, FaLinkedin } from "react-icons/fa";
-import { SiTypescript, SiTailwindcss } from "react-icons/si";
+import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+
 import profileImg from "../assets/profile.jpg";
+
 const HeroSection: React.FC = () => {
   const textRef = useRef<HTMLHeadingElement>(null);
   const subTextRef = useRef<HTMLParagraphElement>(null);
@@ -11,6 +12,7 @@ const HeroSection: React.FC = () => {
   const profileRef = useRef<HTMLDivElement>(null);
   const shapeRefs = useRef<(HTMLDivElement | null)[]>([]);
   const iconsRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const particleRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   useEffect(() => {
     const tl = gsap.timeline();
@@ -67,6 +69,21 @@ const HeroSection: React.FC = () => {
         );
       }
     });
+
+    // Improved Floating Particles Animation
+    particleRefs.current.forEach((particle, index) => {
+      if (particle) {
+        gsap.to(particle, {
+          x: `+=${Math.random() * 30 - 15}`, // Left/Right floating
+          y: `+=${Math.random() * 30 - 15}`, // Up/Down floating
+          duration: 3 + Math.random() * 2, // Different speeds
+          repeat: -1,
+          yoyo: true,
+          ease: "sine.inOut",
+          delay: Math.random() * 2, // Different start times
+        });
+      }
+    });
   }, []);
 
   return (
@@ -86,6 +103,19 @@ const HeroSection: React.FC = () => {
           ></div>
         ))}
       </div>
+
+      {/* Particle Effects */}
+      {[...Array(40)].map((_, i) => (
+        <div
+          key={`particle-${i}`}
+          ref={(el) => el && (particleRefs.current[i] = el)}
+          className="absolute w-1 h-1 rounded-full bg-white opacity-50"
+          style={{
+            top: `${Math.random() * 100}%`,
+            left: `${Math.random() * 100}%`,
+          }}
+        />
+      ))}
 
       {/* Profile Image */}
       <div
@@ -114,16 +144,9 @@ const HeroSection: React.FC = () => {
         Explore My Work 🚀
       </Button>
 
-      {/* Background Floating Tech Icons */}
+      {/* Floating Tech Icons */}
       <div className="absolute bottom-10 flex gap-6">
-        {[
-          FaReact,
-          FaNodeJs,
-          SiTypescript,
-          SiTailwindcss,
-          FaGithub,
-          FaLinkedin,
-        ].map((Icon, index) => (
+        {[FaGithub, FaLinkedin, FaTwitter].map((Icon, index) => (
           <div
             key={index}
             ref={(el) => (iconsRefs.current[index] = el)}

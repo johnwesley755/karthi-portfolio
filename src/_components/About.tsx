@@ -84,11 +84,11 @@ const About = () => {
       <div className="absolute inset-0 z-0 opacity-10 bg-[linear-gradient(to_right,#d3d3d3_1px,transparent_1px),linear-gradient(to_bottom,#d3d3d3_1px,transparent_1px)] [background-size:40px_40px] animate-grid-pan" />
 
       {/* Particle Effects */}
-      {[...Array(15)].map((_, i) => (
+      {[...Array(30)].map((_, i) => (
         <div
           key={`particle-${i}`}
           ref={(el) => el && (particleRefs.current[i] = el)}
-          className="absolute w-3 h-3 rounded-full bg-violet-400 blur-lg"
+          className="absolute w-1 h-1 rounded-full bg-white"
           style={{
             top: `${Math.random() * 100}%`,
             left: `${Math.random() * 100}%`,
