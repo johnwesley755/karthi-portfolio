@@ -87,7 +87,10 @@ const HeroSection: React.FC = () => {
   }, []);
 
   return (
-    <div className="relative flex flex-col items-center justify-center h-screen bg-[#0a0a0a] text-white text-center px-6 overflow-hidden">
+    <div
+      className="relative flex flex-col items-center justify-center h-screen bg-[#0a0a0a] text-white text-center px-6 overflow-hidden"
+      id="home"
+    >
       {/* Background Animated Shapes */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none max-md:hidden">
         {[
@@ -137,25 +140,15 @@ const HeroSection: React.FC = () => {
         A passionate Software Developer crafting seamless digital experiences
         with modern technology.
       </p>
-      <Button
-        ref={buttonRef}
-        className="mt-6 px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-500 hover:opacity-80 transition-all text-lg rounded-xl shadow-md"
-      >
-        Explore My Work 🚀
-      </Button>
-
-      {/* Floating Tech Icons */}
-      <div className="absolute bottom-10 flex gap-6">
-        {[FaGithub, FaLinkedin, FaTwitter].map((Icon, index) => (
-          <div
-            key={index}
-            ref={(el) => (iconsRefs.current[index] = el)}
-            className="text-4xl md:text-5xl text-gray-500 hover:text-white transition transform hover:scale-110"
-          >
-            <Icon />
-          </div>
-        ))}
-      </div>
+      <a href="#projects">
+        {" "}
+        <Button
+          ref={buttonRef}
+          className="mt-6 px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-500 hover:opacity-80 transition-all text-lg rounded-xl shadow-md"
+        >
+          Explore My Work 🚀
+        </Button>{" "}
+      </a>
     </div>
   );
 };

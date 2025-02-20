@@ -36,9 +36,10 @@ const Navbar: React.FC = () => {
   return (
     <header
       ref={navRef}
-      className={`absolute top-0 left-0 w-full z-50 transition-all ${
+      className={`fixed top-0 left-0 w-full z-50 transition-all ${
         isScrolled ? "bg-black/80 backdrop-blur-lg shadow-lg" : "bg-transparent"
       }`}
+      id="home"
     >
       <div className="container mx-auto flex justify-between items-center py-4 px-6">
         {/* Logo */}
