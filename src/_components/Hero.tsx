@@ -120,7 +120,7 @@ const HeroSection: React.FC = () => {
       {/* Profile Image */}
       <div
         ref={profileRef}
-        className="relative w-36 h-36 md:w-48 md:h-48 rounded-full overflow-hidden border-4 border-purple-500 shadow-lg transition-transform transform hover:scale-110"
+        className="relative w-64 h-64 md:w-48 md:h-48 rounded-full overflow-hidden border-4 border-purple-500 shadow-lg transition-transform transform hover:scale-110"
       >
         <img
           src={profileImg}
