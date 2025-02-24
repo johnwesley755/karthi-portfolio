@@ -1,17 +1,17 @@
 import React, { useEffect, useRef } from "react";
-import { Card, CardContent } from "@/components/ui/card";
+import { Card, CardContent } from "../components/ui/card";
 import { motion } from "framer-motion";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import {
   FaHtml5,
   FaCss3Alt,
-  FaJs,
+  FaJava,
   FaPython,
-  FaCuttlefish,
   FaPaintBrush,
   FaBrain,
   FaRobot,
+  FaDatabase,
 } from "react-icons/fa";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -19,54 +19,61 @@ gsap.registerPlugin(ScrollTrigger);
 const skills = [
   {
     name: "HTML",
-    percentage: 85,
+    percentage: 70,
     icon: <FaHtml5 className="text-orange-500 text-5xl" />,
     description:
       "Strong understanding of HTML for structuring web pages effectively.",
   },
   {
     name: "CSS",
-    percentage: 80,
+    percentage: 60,
     icon: <FaCss3Alt className="text-blue-500 text-5xl" />,
     description: "Expert in CSS for creating dynamic and responsive designs.",
   },
   {
-    name: "JavaScript",
+    name: "Java",
     percentage: 80,
-    icon: <FaJs className="text-yellow-400 text-5xl" />,
+    icon: <FaJava className="text-yellow-400 text-5xl" />,
     description:
-      "Experience with JavaScript for interactive and dynamic web elements.",
+      "Experience with Java for better problem solving and algorithmic thinking.",
   },
   {
     name: "Python",
-    percentage: 65,
+    percentage: 70,
     icon: <FaPython className="text-blue-400 text-5xl" />,
     description:
       "Proficient in Python for web applications and backend development.",
   },
   {
-    name: "C Programming",
-    percentage: 65,
-    icon: <FaCuttlefish className="text-green-500 text-5xl" />,
+    name: "SQL",
+    percentage: 40,
+    icon: <FaDatabase className="text-green-500 text-5xl" />,
     description: "Strong foundation in C programming for computational logic.",
   },
   {
     name: "UI/UX",
-    percentage: 50,
+    percentage: 70,
     icon: <FaPaintBrush className="text-pink-500 text-5xl" />,
     description:
       "Designing intuitive user interfaces with a focus on user experience.",
   },
   {
-    name: "AI",
+    name: "Large Language Models",
+    percentage: 50,
+    icon: <FaRobot className="text-purple-500 text-5xl" />,
+    description:
+      "Exploring Large Language Models for building intelligent and automated solutions.",
+  },
+  {
+    name: "Deep Learning",
     percentage: 40,
     icon: <FaBrain className="text-purple-500 text-5xl" />,
     description:
       "Exploring AI for building intelligent and automated solutions.",
   },
   {
-    name: "ML",
-    percentage: 10,
+    name: "Machine Learning",
+    percentage: 50,
     icon: <FaRobot className="text-gray-400 text-5xl" />,
     description:
       "Basic knowledge of machine learning models and training data.",
