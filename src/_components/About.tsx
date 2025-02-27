@@ -5,7 +5,7 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import aboutImg from "../assets/developer.jpg";
 import { FiArrowRight, FiDownload } from "react-icons/fi";
-import resumeFile from "../assets/resume (2).pdf";
+import resumeFile from "../assets/karthi.pdf";
 
 const About = () => {
   const [ref, inView] = useInView({ threshold: 0.2, triggerOnce: true });
