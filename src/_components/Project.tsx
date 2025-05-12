@@ -5,36 +5,37 @@ import { FaGithub } from "react-icons/fa";
 
 const projects = [
   {
-    title: "Twitter Sentiment Analysis",
+    title: "Microblogging Sentiment Analysis",
     description:
-      "The Twitter Sentiment Analysis project is a machine learning-based application designed to analyze the sentiment of tweets in real-time. It classifies tweets as positive, negative, or neutral using Natural Language Processing (NLP) techniques. The model is trained on a large dataset and optimized for accuracy using a GPU-accelerated deep learning model.",
+      "This project uses advanced NLP techniques and deep learning models like BERT to perform real-time sentiment analysis on microblogging posts, classifying sentiments into positive, negative, or neutral, and visualizing trends for business insights",
     techStack: [
       "Twitter API",
       "Python",
+      "BERT / RoBERTa",
       "TensorFlow",
-      "LSTM",
-      "PyTorch",
+      "Scikit-learn",
+      "NLTK / SpaCy",
       "Streamlit",
     ],
     image: "https://i.ytimg.com/vi/ujId4ipkBio/maxresdefault.jpg",
-    github: "https://github.com/karthikeyan-2023/fakenews-with-LSTM",
+    github: "https://github.com/karthikeyan-2023/Microblogging-sentiment-analysis",
   },
   {
-    title: "Titanic Survival Prediction",
+    title: "SkyTicket: Airline Ticket Management System",
     description:
-      "The Titanic Survival Prediction project is a machine learning model that predicts the likelihood of survival for passengers based on various features such as age, gender, ticket class, and fare. It utilizes data preprocessing, feature engineering, and classification algorithms to achieve accurate predictions.",
+      "SkyTicket is a comprehensive Airline Ticket Management System that streamlines flight booking, scheduling, and passenger management through an efficient web-based interface",
     techStack: [
-      "Python",
-      "Pandas",
-      "NumPy",
-      "Scikit-Learn",
-      "Matplotlib",
+      "Java Swing",
+      "Java",
+      "MySQL",
+      "JDBC",
+      "NetBeans",
       "Seaborn",
     ],
     image:
-      "https://i.ytimg.com/vi/fATVVQfFyU0/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLD6k4GDOFwiDPlY41cyKYcHcjxazQ",
+      "https://theairlineproject.net/Images/LogoWithCondenseEdited.png",
     github:
-      "https://github.com/karthikeyan-2023/prodigy-infotech-intern/blob/main/titanic.ipynb?short_path=8f5734d",
+      "https://github.com/karthikeyan-2023/Airline-project/blob/main/README.md",
   },
   {
     title: "Chatbot Development Using Gamma LLM",
@@ -54,6 +55,23 @@ const projects = [
       "https://github.com/karthikeyan-2023/chatbot-with-gemma-llama-model",
   },
   {
+    title: "PoseShift.AI: Advanced Pose Generation and Action Analysis System",
+    description:
+      "PoseShift.AI is an advanced AI system that combines OpenPose, RunwayML, and LLMs to generate realistic 2D/3D human poses, predict actions, and provide natural language feedback for pose analysis",
+    techStack: [
+      "OpenPose",
+      "RunwayML",
+      "Hugging Face",
+      "GANs",
+      "LLM",
+      "gRADIO",
+    ],
+    image:
+      "https://cdn.analyticsvidhya.com/wp-content/uploads/2022/01/65603fig-67bc4bba7b7dc.webp",
+    github:
+      "https://huggingface.co/spaces/karthi12334r5/pose-generator-space/tree/main",
+  },
+  {
     title: "Fake News Detection Model Using LSTM",
     description:
       "This project utilizes Long Short-Term Memory (LSTM) networks and word embeddings to detect fake news articles. It processes textual data, extracts meaningful features, and classifies news as real or fake using deep learning techniques.",
@@ -64,8 +82,6 @@ const projects = [
       "LSTM",
       "Word Embeddings",
       "NLTK",
-      "Pandas",
-      "NumPy",
     ],
     image:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxBJ3AkE1zg3ZwSTb_n0_HtqDuxkkrPmFu2A&s",

@@ -12,6 +12,7 @@ import {
   FaBrain,
   FaRobot,
   FaDatabase,
+  FaTextHeight,
 } from "react-icons/fa";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -77,6 +78,13 @@ const skills = [
     icon: <FaRobot className="text-gray-400 text-5xl" />,
     description:
       "Basic knowledge of machine learning models and training data.",
+  },
+  {
+    name: "Natural Lanuage Processing",
+    percentage: 50,
+    icon: <FaTextHeight className="text-gray-400 text-5xl" />,
+    description:
+      "Working knowledge of advanced NLP concepts such as named entity recognition, sentiment analysis, and text vectorization techniques like TF-IDF and word embeddings.",
   },
 ];
 
